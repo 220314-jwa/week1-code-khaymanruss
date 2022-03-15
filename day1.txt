@@ -1,13 +1,15 @@
 int score = 80;
-// int score is an int data type with a value of 80
+// int score is an integer variable with an assigned value of 80
 String result;
-// we are referencing the string object result in the following statement//
+// declaring the variable result without a value
 if (score == 80) {
-//beginning of the if..else if..else statement
+//beginning of the if..else if..else statement. If the variable score is equal(==) to 80 then the variable result is assigned the value "You passed!"
 	result = "You passed!";
-} else if (score > 80) {
+} else if (score > 80) { 
+//else if the variable score is greater than(>) then the variable result will be assigned the value "You did great!"
 	result = "You did great!";
 } else {
+//if the variable score is neither of those then the variable result is assigned the value "You did not pass. Try again!"
 	result = "You did not pass. Try again!";
 }
 //Tested three conditions to the int score
