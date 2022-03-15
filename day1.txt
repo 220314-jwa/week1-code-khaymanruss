@@ -1,13 +1,15 @@
 int score = 80;
-
+// int score is an int data type with a value of 80
 String result;
-
+// we are referencing the string object result in the following statement//
 if (score == 80) {
+//beginning of the if..else if..else statement
 	result = "You passed!";
 } else if (score > 80) {
 	result = "You did great!";
 } else {
 	result = "You did not pass. Try again!";
 }
-
+//Tested three conditions to the int score
 System.out.println(result);
+//system prints the line of the result after the test which would be "You passed!"
