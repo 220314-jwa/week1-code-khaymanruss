@@ -1,34 +1,36 @@
-public static void main(String[] args) {
-	String[] foodTypes = getFoodTypes();
-	String myType = foodTypes[2];
+//to begin I would like to ask for assistance in a 1 on 1 to go over the "technical" description of the first part of this code after the main method. I am not confident in my description. Thank you 
 
-	String[] foodsOfMyType = getFoodsByType(myType);
+public static void main(String[] args) {	//this is our main method with a public static modifier and a void return type
+	String[] foodTypes = getFoodTypes();	//assigning a variable to the string array foodTypes 
+	String myType = foodTypes[2];		//Declaring a String array foodTypes with 3 indexes
+
+	String[] foodsOfMyType = getFoodsByType(myType);	//This assigns foodsOfMyType types of values in the array and an action to get the values
 	
-	for (String food : foodsOfMyType) {
-		System.out.println(food);
+	for (String food : foodsOfMyType) {	//begin a for-each loop that will loop through the elements in the array 
+		System.out.println(food);	 
 	}
 }
 
-public static String[] getFoodTypes() {
-	String[] foodTypes = {"breakfast","lunch","dinner","dessert","snack"};
-	return foodTypes;
+public static String[] getFoodTypes() {		//a static method that calls the string array of getFoodTypes
+	String[] foodTypes = {"breakfast","lunch","dinner","dessert","snack"};	//assigning elements in the array 
+	return foodTypes;			//calling for a return of foodTypes
 }
 
-public static String[] getFoodsByType(String type) {
-	String[] foods = new String[3];
+public static String[] getFoodsByType(String type) {	//a static method that calls for the values in getFoodByTypes
+	String[] foods = new String[3];		// the expression that is given a value to be tested against the value of each case
 
-	switch(type) {
-	case "breakfast":
+	switch(type) {				//switch statement starts testing the variable to each case
+	case "breakfast":			//first case 1 and its following values in this element
 		foods[0] = "pancakes";
 		foods[1] = "cereal";
 		foods[2] = "omelette";
-		break;
-	case "lunch":
+		break;				//a break statement that terminates the first switch and moves to the next line of the switch statement
+	case "lunch":				//second case 2 and its following values
 		foods[0] = "sandwich";
 		foods[1] = "salad";
 		foods[2] = "soup";
-		break;
-	case "dinner":
+		break;				//a break statement
+	case "dinner":				//third case 3 and its following values. The variable we are looking for is equal to this case therefore the switch statement will stop here and execute the the following statements.
 		foods[0] = "curry";
 		foods[1] = "stir fry";
 		foods[2] = "burger";
@@ -43,10 +45,11 @@ public static String[] getFoodsByType(String type) {
 		foods[1] = "apple";
 		foods[2] = "samosa";
 		break;
-	default:
+	default:				//a default case that will be executed if the variable does not match any of the cases in the switch statement.
 		// add your own
 		break;
 	}
 
-	return foods;
+	return foods;				//returning the array and its values that match the variable listed in the switch. If the code is ran it would result 
+						//with curry, stir fry and burger
 }
