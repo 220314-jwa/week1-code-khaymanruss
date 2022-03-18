@@ -1,24 +1,25 @@
-public class Food {
-	public String name;
+public class Food {			//declaring a class Food
+	public String name;		//fields of the class 
 	public String type;
 
-	public Food(String name, String type) {
-		this.name = name;
+	public Food(String name, String type) {		//a  constructor with two parameters; name and type
+		this.name = name;			//differentiating the the instance variables from the local variables
 		this.type = type;
 	}
 
-	public void cook() {
-		if (!name.contains("cooked")) {
-			name = "cooked " + name;
+	public void cook() {				//a constructor
+		if (!name.contains("cooked")) {		// an if statemtent that should be tested 
+			name = "cooked " + name;	//missing a sysout
 		}
 	}
 }
 
-public class Main {
-	public static void main(String[] args) {
-		Food myFood = new Food("potato", "vegetable");
-		myFood.cook();
+public class Main {					//declaring a class called Main which will need to be done in a seperate file
+	public static void main(String[] args) {	//main method
+		Food myFood = new Food("potato", "vegetable");	//assigning values to the object	
+		myFood.cook();				//referencing a method with the object stated in main
 
-		System.out.println(myFood.name);
+		System.out.println(myFood.name);	//cannot run this code due to a few errors; 
+							//the class main must be defined in its own file
 	}
 }
