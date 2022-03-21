@@ -1,25 +1,25 @@
-<html>
-	<head>
-		<title>Daily Code Review</title>
-	</head>
-	<body>
-		<h1>Cook your food!</h1>
-		<form action="http://localhost:8080/cook">
-			<label for="foodName">Food Name:</label>
-			<input id="foodName" name="foodName" type="text">
-			<br>
-			<button type="submit">Submit</button>
+<html>		
+	<head>		//a tag that contains everything going onto the html
+		<title>Daily Code Review</title>	//a title tag that prints Daily Code Review at the top
+	</head>		//end of the head tag
+	<body>		//a tag that contains the page structure and everything seen by the viewer
+		<h1>Cook your food!</h1>		//a header tag that will show the text "Cook your food"
+		<form action="http://localhost:8080/cook">	//sets the uri of where to send the information from the html
+			<label for="foodName">Food Name:</label>	//prints Food Name: and assigns the what the phrase is for
+			<input id="foodName" name="foodName" type="text">	//creates an input where text can be typed
+			<br>						//a line break
+			<button type="submit">Submit</button>		//creates a submit button
 		</form>
 	</body>
 </html>
 
-public static void main(String[] args) {
-	Javalin app = Javalin.create();
-	app.start();
+public static void main(String[] args) {		//main method 
+	Javalin app = Javalin.create();			//the call of a javalin object
+	app.start();					//starts the server to listen to http requests
 
-	app.get("cook", ctx -> {
-		String foodSent = ctx.formParam("foodName");
-		String cookedFood = "cooked " + foodSent;
-		ctx.result("Here's your food! <br>" + cookedFood);
+	app.get("cook", ctx -> {			//a get request for the word cook
+		String foodSent = ctx.formParam("foodName");	//lists a form of String parameters
+		String cookedFood = "cooked " + foodSent;	//combines the variable with the text "cooked"
+		ctx.result("Here's your food! <br>" + cookedFood);	//context response that prints "Here's your food! a line break and the cooked food"
 	});
-}
+}	
